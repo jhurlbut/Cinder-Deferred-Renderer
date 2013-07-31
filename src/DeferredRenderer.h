@@ -28,7 +28,7 @@ using namespace ci::app;
 using namespace std;
 
 static const float  LIGHT_CUTOFF_DEFAULT = 0.01;        //light intensity cutoff point
-static const float  LIGHT_BRIGHTNESS_DEFAULT = 60;      //brightness of lights
+static const float  LIGHT_BRIGHTNESS_DEFAULT = 1;      //brightness of lights
 
 //Light Cube Class
 class Light_PS
@@ -372,7 +372,7 @@ public:
         mDeferredShader.uniform("two_sided", 0.8f);
         mDeferredShader.uniform("useTexture", 0.0f);
         
-        drawLightMeshes();
+       // drawLightMeshes();
         
         mDeferredShader.bind();
         mDeferredShader.uniform("diff_coeff", 1.0f);
@@ -634,7 +634,7 @@ public:
     {
         if(fRenderShadowCastersFunc) {fRenderShadowCastersFunc(NULL);}
         if(fRenderNotShadowCastersFunc) {fRenderNotShadowCastersFunc(NULL);}
-        drawLightMeshes();
+        //drawLightMeshes();
     }
     
     void renderLights()

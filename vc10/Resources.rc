@@ -1,5 +1,8 @@
-#include "..\include\Resources.h"
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resources.h"
 
+//images
 NOISE_SAMPLER
 SSAO_VERT
 SSAO_FRAG
@@ -20,4 +23,4 @@ RES_SHADER_CUBESHADOW_VERT
 RES_SHADER_CUBESHADOW_FRAG
 RES_SHADER_FXAA_VERT
 RES_SHADER_FXAA_FRAG
-
+RES_EARTH_TEX

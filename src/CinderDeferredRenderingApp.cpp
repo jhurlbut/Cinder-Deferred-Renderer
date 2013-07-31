@@ -55,7 +55,7 @@ static const float	APP_RES_HORIZONTAL = 1024.0f;
 static const float	APP_RES_VERTICAL = 768.0f;
 static const Vec3f	CAM_POSITION_INIT( -14.0f, 7.0f, -14.0f );
 static const Vec3f	LIGHT_POSITION_INIT( 3.0f, 1.5f, 0.0f );
-static const int    NUM_LIGHTS = 500;        //number of lights
+static const int    NUM_LIGHTS = 100;        //number of lights
 
 
 class CinderDeferredRenderingApp : public AppBasic 
@@ -175,9 +175,9 @@ void CinderDeferredRenderingApp::setup()
                 break;
         };
         
-        mDeferredRenderer.addCubeLight( Vec3f(Rand::randFloat(-1000.0f, 1000.0f),
-                                        Rand::randFloat(0.0f, 50.0f),
-                                        Rand::randFloat(-1000.0f, 1000.0f)),
+        mDeferredRenderer.addCubeLight( Vec3f(Rand::randFloat(-10.0f, 10.0f),
+                                        Rand::randFloat(0.0f, 10.0f),
+                                        Rand::randFloat(-10.0f, 10.0f)),
                                         randCol * LIGHT_BRIGHTNESS_DEFAULT);
     }
     
@@ -194,7 +194,7 @@ void CinderDeferredRenderingApp::draw()
     mDeferredRenderer.renderFullScreenQuad(RENDER_MODE);
     
 	if (mShowParams)
-		params::InterfaceGl::draw();
+		mParams.draw();
 }
 
 void CinderDeferredRenderingApp::mouseDown( MouseEvent event )

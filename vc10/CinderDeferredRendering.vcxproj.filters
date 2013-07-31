@@ -29,6 +29,9 @@
     <ClInclude Include="..\src\DeferredRenderer.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
@@ -93,5 +96,13 @@
     <None Include="..\resources\DeferredResources\shaders\SSAOL_glsl.frag">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="image1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\DeferredResources\textures\random.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
